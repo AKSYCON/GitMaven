@@ -15,7 +15,7 @@
       <scope>test</scope>
     </dependency>
 
-	  <<!-- https://mvnrepository.com/artifact/org.codehaus.sonar/sonar-plugin-api -->
+	  
 <dependency>
     <groupId>org.codehaus.sonar</groupId>
     <artifactId>sonar-plugin-api</artifactId>
