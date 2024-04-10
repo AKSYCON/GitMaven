@@ -15,11 +15,11 @@
       <scope>test</scope>
     </dependency>
 <!-- https://mvnrepository.com/artifact/org.codehaus.sonar/sonar-maven-plugin -->
-<dependency>
-    <groupId>org.codehaus.sonar</groupId>
+<plugin>
+    <groupId>org.sonarsource.scanner.maven</groupId>
     <artifactId>sonar-maven-plugin</artifactId>
-    <version>5.1</version>
-</dependency>
+    <version>3.2</version>
+</plugin>
 
 
     <dependency>
