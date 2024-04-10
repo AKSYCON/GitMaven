@@ -19,7 +19,6 @@
     <groupId>org.codehaus.sonar</groupId>
     <artifactId>sonar-plugin-api</artifactId>
     <version>5.1</version>
-    <scope>provided</scope>
 </dependency>
 
     <dependency>
@@ -45,11 +44,6 @@
                 <release>11</release>
             </configuration>
         </plugin>
-	<plugin>
-    		<groupId>org.codehaus.mojo</groupId>
-    		<artifactId>sonar-maven-plugin</artifactId>
-    		<version>5.1</version>
-	</plugin>
     </plugins>
   </build>
 </project>
