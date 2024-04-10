@@ -14,8 +14,12 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-<!-- https://mvnrepository.com/artifact/org.codehaus.sonar/sonar-maven-plugin -->
 
+	  <dependency>
+    <groupId>org.sonarsource.scanner.maven</groupId>
+    <artifactId>sonar-maven-plugin</artifactId>
+    <version>5.0.1.3006</version>
+</dependency>
 
 
     <dependency>
@@ -41,11 +45,7 @@
                 <release>11</release>
             </configuration>
 	</plugin>
-	    <plugin>
-    <groupId>org.sonarsource.scanner.maven</groupId>
-    <artifactId>sonar-maven-plugin</artifactId>
-    <version>5.0.1.3006</version>
-</plugin>
+	    
     </plugins>
   </build>
 </project>
