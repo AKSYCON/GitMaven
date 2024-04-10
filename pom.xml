@@ -15,11 +15,14 @@
       <scope>test</scope>
     </dependency>
 
-	  <dependency>
-    <groupId>org.sonarsource.scanner.maven</groupId>
-    <artifactId>sonar-maven-plugin</artifactId>
-    <version>5.0.1.3006</version>
+	  <<!-- https://mvnrepository.com/artifact/org.codehaus.sonar/sonar-plugin-api -->
+<dependency>
+    <groupId>org.codehaus.sonar</groupId>
+    <artifactId>sonar-plugin-api</artifactId>
+    <version>5.0.1</version>
+    <scope>provided</scope>
 </dependency>
+
 
 
     <dependency>
