@@ -15,11 +15,7 @@
       <scope>test</scope>
     </dependency>
 <!-- https://mvnrepository.com/artifact/org.codehaus.sonar/sonar-maven-plugin -->
-<plugin>
-    <groupId>org.sonarsource.scanner.maven</groupId>
-    <artifactId>sonar-maven-plugin</artifactId>
-    <version>3.2</version>
-</plugin>
+
 
 
     <dependency>
@@ -45,6 +41,11 @@
                 <release>11</release>
             </configuration>
 	</plugin>
+	    <plugin>
+    <groupId>org.sonarsource.scanner.maven</groupId>
+    <artifactId>sonar-maven-plugin</artifactId>
+    <version>3.2</version>
+</plugin>
     </plugins>
   </build>
 </project>
