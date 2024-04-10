@@ -14,6 +14,14 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+	  <!-- https://mvnrepository.com/artifact/org.codehaus.sonar/sonar-plugin-api -->
+<dependency>
+    <groupId>org.codehaus.sonar</groupId>
+    <artifactId>sonar-plugin-api</artifactId>
+    <version>5.1</version>
+    <scope>provided</scope>
+</dependency>
+
     <dependency>
 		 <groupId>junit</groupId>     <!-- NOT org.junit here -->
   		<artifactId>junit-dep</artifactId>
