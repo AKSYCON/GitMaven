@@ -7,6 +7,10 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>JenkinsProj Maven Webapp</name>
   <url>http://maven.apache.org</url>
+	<properties>
+		<maven.complier.source>1.7</maven.complier.source>
+		<maven.complier.target>1.7</maven.complier.target>
+	</properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -14,14 +18,6 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-
-	  
-<dependency>
-    <groupId>org.codehaus.sonar</groupId>
-    <artifactId>sonar-plugin-api</artifactId>
-    <version>3.2</version>
-    <scope>provided</scope>
-</dependency>
 
 
 
@@ -48,7 +44,24 @@
                 <release>11</release>
             </configuration>
 	</plugin>
-	    
+	    <plugin>
+		    <groupId>org.sonarsource.scanner.maven</groupId>
+        		<artifactId>sonar-maven-plugin</artifactId>
+        		<version>3.7.0.1746</version>
+	    </plugin>
     </plugins>
   </build>
+	<profiles>
+		<profile>
+			<id>sonar</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<sonar.host.url>
+					http://127.0.0.1:9000
+				</sonar.host.url>
+			</properties>
+		</profile>
+	</profiles>
 </project>
