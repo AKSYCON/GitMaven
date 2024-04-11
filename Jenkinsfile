@@ -1,7 +1,5 @@
 pipeline {
-    agent { 
-    label 'linux'
-}
+    agent any
 tools{
     maven 'MAVEN_HOME'
 }
@@ -10,7 +8,7 @@ tools{
         stage("Build and SonarQube") {
             steps {
                 withSonarQubeEnv('sonarServer'){
-                    sh 'mvn clean package sonar:sonar'
+                    bat 'mvn clean package sonar:sonar'
                 }
             }
         }
