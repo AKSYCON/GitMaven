@@ -1,28 +1,14 @@
 pipeline {
-    agent any
+    agent none
 
     stages {
-        stage('Build') {
+        stage('Build and SonarQube') {
+            agent any
             steps {
-                echo 'Build App'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Test App'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploy App'
+                withSonarQubeEnvy('SonarQube Scanner'){
+                    sh 'mvn clean package sonar:sonar'
+                }
             }
         }
     }
-    post
-        {
-            always
-            {
-                emailext body: '', subject: 'Pipeline Details', to: 'dracosycon09@gmail.com'   
-            }
-        }
 }
