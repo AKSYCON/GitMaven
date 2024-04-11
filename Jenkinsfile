@@ -2,7 +2,7 @@ pipeline {
     agent none
 
     stages {
-        stage('Build and SonarQube') {
+        stage("Build and SonarQube") {
             agent any
             steps {
                 withSonarQubeEnv('sonarServer'){
