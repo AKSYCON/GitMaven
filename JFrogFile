@@ -12,7 +12,7 @@ pipeline {
     }
     stage('Upload to Artifactory') {
       steps {
-          bat 'jf rt upload --url http://192.168.1.230:8082/artifactory/ --access-token ${ARTIFACTORY_ACCESS_TOKEN} com\jenkinns\JenkinsProj\0.0.1-SNAPSHOT\JenkinsProj-0.0.1-SNAPSHOT.war java-web-app/'
+          bat 'jf rt upload --url http://192.168.1.230:8082/artifactory/ --access-token ${ARTIFACTORY_ACCESS_TOKEN} com/jenkinns/JenkinsProj/0.0.1-SNAPSHOT/JenkinsProj-0.0.1-SNAPSHOT.war java-web-app/'
       }
     }
   }
