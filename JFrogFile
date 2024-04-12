@@ -2,7 +2,7 @@ pipeline {
   agent any
   environment {
     CI = true
-    ARTIFACTORY_ACCESS_TOKEN = credentials('jFrog-token')
+    ARTIFACTORY_ACCESS_TOKEN = credentials('JFrogToken')
   }
   stages {
     stage('Build') {
