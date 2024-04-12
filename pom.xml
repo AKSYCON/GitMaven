@@ -27,6 +27,14 @@
   		<version>4.8.2</version>
   			<scope>test</scope>
 	</dependency>
+
+	  	<!-- https://mvnrepository.com/artifact/org.jfrog.common/jfrog-utils -->
+	<dependency>
+    		<groupId>org.jfrog.common</groupId>
+    		<artifactId>jfrog-utils</artifactId>
+    		<version>1.5.5</version>
+	</dependency>
+
   </dependencies>
   <build>
     <finalName>JenkinsProj</finalName>
