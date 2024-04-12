@@ -10,6 +10,15 @@ pipeline {
         bat 'mvn clean install'
       }
     }
+    stage('Prepare Artifacts') {
+            steps {
+                // Create the java-web-app directory in the target directory
+                bat 'mkdir target\\java-web-app'
+                
+                // Copy the demo-0.0.1-SNAPSHOT.jar file to the java-web-app directory
+                bat 'copy target\\demo-0.0.1-SNAPSHOT.jar target\\java-web-app\\'
+            }
+    }
     stage('Upload to Artifactory') {
       steps {
           bat 'jf rt upload --url http://127.0.0.1:8082/artifactory/ --access-token ${ARTIFACTORY_ACCESS_TOKEN} target/demo-0.0.1-SNAPSHOT.jar  java-web-app/'
